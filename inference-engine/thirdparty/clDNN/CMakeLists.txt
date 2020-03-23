@@ -767,7 +767,7 @@ foreach(__CLDNN_CompilerFlagName IN ITEMS "CMAKE_CXX_FLAGS" "CMAKE_C_FLAGS")
         MultiProcessorCompilation
         DeadCodeEliminate
         ExtensionsEnabled
-        TreatWarnAsErrorEnabled
+        TreatWarnAsErrorDisabled
         WarnLevel4
         NoFastMath
         StackProtector
@@ -856,6 +856,7 @@ foreach(__CLDNN_CompilerFlagName IN ITEMS "CMAKE_CXX_FLAGS" "CMAKE_C_FLAGS")
           -Wno-error=unused-parameter
           -Wno-error=unused-function
           -Wno-error=pedantic
+		  -Wno-error
           -march=corei7
           -mstackrealign
           -msse
@@ -883,7 +884,7 @@ foreach(__CLDNN_CompilerFlagName IN ITEMS "CMAKE_CXX_FLAGS" "CMAKE_C_FLAGS")
           -pipe
           -fvisibility=hidden
           -fvisibility-inlines-hidden
-          -Wall
+          -Wno-error
           -Wno-covered-switch-default
           -Wextra
           -Wno-unused-parameter
